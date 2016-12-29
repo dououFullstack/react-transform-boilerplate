@@ -3,24 +3,17 @@ import { NICE, SUPER_NICE } from './colors';
 import  './style/main.scss';
 // import { Home } from './Home';
 import Home from './Home'
+import Navbar from './share/Navbar';
 
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { counter: 0 };
-    this.interval = setInterval(() => this.tick(), 1000);
-  }
-
-  tick() {
-    this.setState({
-      counter: this.state.counter + this.props.increment
-    });
   }
 
   render() {
     return (
       <div className="app-wrap">
-        <div className="app-header"></div>
+        <Navbar />
         <Home />
         <div className="app-footer">app Footer</div>
       </div>
